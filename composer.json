@@ -1,6 +1,6 @@
 {
     "name": "leafs/skeleton",
-    "description": "A boiler-plate application for rapid development.",
+    "description": "A boiler-plate application for rapid development with Leaf PHP.",
     "type": "library",
     "keywords": [
         "framework",
