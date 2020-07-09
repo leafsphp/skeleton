@@ -28,6 +28,18 @@ This will start a new skeleton project.
 
 ```bash
 C:.
+├───App
+│   ├───Controllers
+│   ├───Models
+│   └───pages
+├───Config
+├───storage
+│   ├───app
+│   │   └───public
+│   ├───framework
+│   │   └───views
+│   └───logs
+└───vendor
 ```
 
 This is the default directory structure that leaf skeleton offers, although you can customize it in any way you want. Simply edit the `Config/paths.php` file when you're done re-arranging Skeleton.
