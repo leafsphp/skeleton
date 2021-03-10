@@ -2,11 +2,11 @@
 namespace Config;
 
 /**
- * Leaf Skeleton App Config
+ * Leaf API App Config
  */
 class App {
 	/**
-	 * General Leaf Skeleton config
+	 * General Leaf API config
 	 */
 	protected $config = [
 		'error.debug' => true

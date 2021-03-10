@@ -22,8 +22,10 @@ $app->set404();
 $app->setNamespace("\App\Controllers");
 
 $app->get("/", function () {
-	import(paths["views"]."index.html");
+	import(views_path("index.html", false));
 });
+
+$app->blade->configure(views_path(null, false), storage_path("framework/views"));
 
 Route("GET", "/test", "TestsController@test");
 

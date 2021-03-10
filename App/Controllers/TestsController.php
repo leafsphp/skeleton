@@ -8,6 +8,6 @@ class TestsController extends \Leaf\ApiController
 {
 	public function test()
 	{
-		respond(Test::all());
+		json(Test::all());
 	}
 }
