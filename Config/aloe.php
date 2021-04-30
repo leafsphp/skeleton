@@ -2,17 +2,17 @@
 // config for aloe CLI
 return [
     "paths" => [
-        "controllers_path" => "/App/Controllers",
-        "models_path" => "/App/Models",
-        "migrations_path" => "/App/Database/Migrations",
-        "seeds_path" => "/App/Database/Seeds",
-        "factories_path" => "/App/Database/Factories",
-        "helpers_path" => "/App/Helpers",
-        "views_path" => "/App/Views",
-        "config_path" => "/App/Config",
-        "storage_path" => "/App/storage",
-        "commands_path" => "/App/Console",
-        "routes_path" => "/App/Routes",
+        "controllers_path" => "/Controllers",
+        "models_path" => "/Models",
+        "migrations_path" => "/Migrations",
+        "seeds_path" => "/Seeds",
+        "factories_path" => "/Factories",
+        "helpers_path" => "/Helpers",
+        "views_path" => "/pages",
+        "config_path" => "/Config",
+        "storage_path" => "/storage",
+        "commands_path" => "/Console",
+        "routes_path" => "/routes",
         "lib_path" => "/Lib",
     ],
 ];
