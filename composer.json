@@ -19,7 +19,7 @@
     ],
     "require": {
         "doctrine/dbal": "^2.9",
-        "leafs/leaf": "^2.4",
+        "leafs/leaf": "^2.5",
         "vlucas/phpdotenv": "^3.6"
     },
     "config": {
