@@ -5,10 +5,13 @@
 | Set up 404 handler
 |--------------------------------------------------------------------------
 |
-| Create a handler for 404 errors
+| Create a handler for 404 errors. Uncomment the lines below to
+| add a custom error 404 handler.
 |
 */
-$app->set404();
+// $app->set404(function() {
+//     echo "error 404";
+// });
 
 /*
 |--------------------------------------------------------------------------
@@ -19,16 +22,7 @@ $app->set404();
 | the controller namespace first.
 |
 */
-$app->setNamespace("\App\Controllers");
+$app->setNamespace("\Controllers");
 
-$app->get("/", function () {
-	import(views_path("index.html", false));
-});
-
-$app->blade->configure(views_path(null, false), storage_path("framework/views"));
-
-Route("GET", "/test", "TestsController@test");
-
-Route("GET", "/test/blade", function () {
-	render("blade", ["data" => "This is a variable"]);
-});
+// You can break up routes into modules
+require __DIR__ . "/_app.php";
