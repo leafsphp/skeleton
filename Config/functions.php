@@ -86,6 +86,16 @@ if (!function_exists('fs')) {
 	}
 }
 
+if (!function_exists('flash')) {
+    /**
+     * Return Leaf's flash object
+     */
+    function flash()
+    {
+        return \Leaf\Flash::class;
+    }
+}
+
 if (!function_exists('hasAuth')) {
 	/**
 	 * Find out if there's an active sesion
@@ -94,6 +104,19 @@ if (!function_exists('hasAuth')) {
 	{
 		return !!sessionUser();
 	}
+}
+
+if (!function_exists('import')) {
+    /**
+     * Output page as response
+     *
+     * @param string $data The page to output
+     * @param int $code The http status code
+     */
+    function import($data, $code = 200)
+    {
+        app()->response()->page($data, $code);
+    }
 }
 
 if (!function_exists('json')) {
@@ -126,19 +149,6 @@ if (!function_exists('markup')) {
 	}
 }
 
-if (!function_exists('import')) {
-    /**
-     * Output page as response
-     *
-     * @param string $data The page to output
-     * @param int $code The http status code
-     */
-    function import($data, $code = 200)
-    {
-        app()->response()->page($data, $code);
-    }
-}
-
 if (!function_exists('plural')) {
 	function plural($value, $count = 2)
 	{
@@ -147,10 +157,10 @@ if (!function_exists('plural')) {
 }
 
 if (!function_exists('render')) {
-	function render(string $view, array $data = [], array $mergeData = [])
+	function render(string $view, array $data = [])
 	{
 		if (viewConfig("view_engine") === \Leaf\Blade::class) {
-			return markup(view($view, $data, $mergeData));
+			return markup(view($view, $data));
 		}
 
 		return viewConfig("render")($view, $data);
@@ -289,11 +299,22 @@ if (!function_exists('view')) {
 	 * @param array $data Data to pass into app
 	 * @param array $mergeData
 	 */
-	function view(string $view, array $data = [], array $mergeData = [])
+	function view(string $view, array $data = [])
 	{
-		app()->blade->configure(viewConfig("views_path"), viewConfig("cache_path"));
-		return app()->blade->render($view, $data, $mergeData);
+		app()->template->config(["path" => viewConfig("views_path")]);
+		return app()->template->render($view, $data);
 	}
+}
+
+// App
+
+/**
+ * Get app configuration
+ */
+function AppConfig($setting = null)
+{
+	$config = require __DIR__ . "/app.php";
+	return !$setting ? $config : $config[$setting];
 }
 
 // Auth
@@ -407,7 +428,6 @@ function factories_path($path = null)
  */
 function routes_path($path = null)
 {
-	return "/App/Routes/$path";
 	return app_paths("routes_path") . "/$path";
 }
 
@@ -416,7 +436,6 @@ function routes_path($path = null)
  */
 function helpers_path($path = null)
 {
-	return "/App/Helpers/$path";
 	return app_paths("helpers_path") . "/$path";
 }
 
