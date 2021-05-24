@@ -159,9 +159,9 @@ if (!function_exists('plural')) {
 if (!function_exists('render')) {
 	function render(string $view, array $data = [])
 	{
-		if (viewConfig("view_engine") === \Leaf\Blade::class) {
-			return markup(view($view, $data));
-		}
+        if (!viewConfig("experimental")) {
+            return markup(view($view, $data));
+        }
 
 		return viewConfig("render")($view, $data);
 	}

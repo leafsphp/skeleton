@@ -27,33 +27,26 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Template Engine [EXPERIMENTAL]
+    | Leaf EXPERIMENTAL features
     |--------------------------------------------------------------------------
     |
-    | Leaf MVC unlike other frameworks tries to give you as much control as
-    | you need. As such, you can decide which view engine to use.
+    | This allows you to use the experimental features below
     |
     */
-    "view_engine" => \Leaf\Blade::class,
+    "experimental" => false,
 
     /*
     |--------------------------------------------------------------------------
     | Custom render method [EXPERIMENTAL]
     |--------------------------------------------------------------------------
     |
-    | This render method is triggered whenever render() is called
-    | in your app if you're using a custom view engine.
+    | This render method is triggered whenever render() with the experimental
+    | option above set to true. This render method allows you to even plug
+    | in external view libraries, configure them and call them with `render`
+    | whenever and wherever you feel the need.
     |
     */
     "render" => function(string $view, array $data = []) {
-        $veins = new \Leaf\Veins\Template;
-        $veins->configure([
-            "veins_dir" => views_path(null, false),
-            "cache_dir" => storage_path('framework/views/'),
-        ]);
-        $veins->set($data);
-        $veins->render($view);
-
-        // This example is what veins would look like
+        return markup(view($view, $data));
     },
 ];
