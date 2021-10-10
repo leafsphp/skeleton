@@ -1,6 +1,6 @@
 <p align="center">
     <br><br>
-    <img src="https://leaf-docs.netlify.app/images/logo.png" height="100"/>
+    <img src="https://leafphp.dev/logo.png" height="100"/>
     <h1 align="center">Leaf Skeleton</h1>
     <br>
     <br><br><br>
@@ -10,9 +10,11 @@
 [![Total Downloads](https://poser.pugx.org/leafs/api/downloads)](https://packagist.org/packages/leafs/api)
 [![License](https://poser.pugx.org/leafs/api/license)](https://packagist.org/packages/leafs/api) -->
 
-# Leaf Skeleton
+# Leaf Skeleton 3
 
 Use this skeleton application to quickly setup and start working on a new Leaf PHP application without using a full-blown framework. Unlike [Leaf MVC](//leafmvc.netlify.app) and [Leaf API](//leafphp.netlify.app/#/leaf-api/), Skeleton keeps leaf as is, and doesn't build on top of it, it's perfect for creating smaller projects.
+
+**This version of skeleton uses Leaf v3 (not yet released).**
 
 ## Installation
 
