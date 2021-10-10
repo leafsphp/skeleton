@@ -9,5 +9,8 @@ namespace Controllers;
  */
 class Controller extends \Leaf\Controller
 {
-    //
+    public function render($view, $data)
+    {
+        return ViewConfig("render")($view, $data);
+    }
 }

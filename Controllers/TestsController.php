@@ -9,12 +9,12 @@ class TestsController extends Controller
     public function index()
     {
         render("test", [
-            "title" => "Leaf Skeleton v2"
+            "title" => "Leaf Skeleton v3.0",
         ]);
     }
 
     public function test()
     {
-        json(Test::all());
+        response()->json(Test::all());
     }
 }

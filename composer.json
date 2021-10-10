@@ -18,9 +18,13 @@
         }
     ],
     "require": {
-        "doctrine/dbal": "^2.9",
-        "leafs/leaf": "^2.5",
-        "vlucas/phpdotenv": "^3.6"
+        "vlucas/phpdotenv": "^3.6",
+        "leafs/leaf": "dev-v3.x-dev",
+        "leafs/logger": "^1.0",
+        "leafs/cors": "^1.0",
+        "leafs/mvc-core": "dev-main",
+        "leafs/form": "^1.0",
+        "leafs/bareui": "^1.0"
     },
     "config": {
         "optimize-autoloader": true,

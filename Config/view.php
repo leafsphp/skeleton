@@ -11,7 +11,7 @@ return [
     | the usual LeafMVC view path has already been registered for you.
     |
     */
-    "views_path" => views_path("", false),
+    "viewsPath" => viewsPath("", false),
 
     /*
     |--------------------------------------------------------------------------
@@ -23,21 +23,11 @@ return [
     | directory. However, as usual, you are free to change this value.
     |
     */
-    "cache_path" => storage_path('framework/views'),
+    "cachePath" => storagePath('framework/views'),
 
     /*
     |--------------------------------------------------------------------------
-    | Leaf EXPERIMENTAL features
-    |--------------------------------------------------------------------------
-    |
-    | This allows you to use the experimental features below
-    |
-    */
-    "experimental" => false,
-
-    /*
-    |--------------------------------------------------------------------------
-    | Custom render method [EXPERIMENTAL]
+    | Custom render method
     |--------------------------------------------------------------------------
     |
     | This render method is triggered whenever render() with the experimental
@@ -47,6 +37,7 @@ return [
     |
     */
     "render" => function(string $view, array $data = []) {
-        return markup(view($view, $data));
+        app()->template->config("path", viewsPath("/", false));
+        return response()->markup(app()->template->render($view, $data));
     },
 ];

@@ -1,4 +1,7 @@
 <?php
+
+use Leaf\Database;
+
 /*
 |--------------------------------------------------------------------------
 | Register The Auto Loader
@@ -10,6 +13,7 @@
 | loading of any our classes "manually". Feels great to relax.
 |
 */
+
 require_once __DIR__ . '/vendor/autoload.php';
 
 /*
@@ -24,25 +28,13 @@ require_once __DIR__ . '/vendor/autoload.php';
 
 /*
 |--------------------------------------------------------------------------
-| Register The Leaf Auto Loader
+| Database Connection
 |--------------------------------------------------------------------------
 |
-| Require all Leaf API's Files
+| Connect your database to your leaf app.
 |
 */
-require __DIR__ . "/Config/bootstrap.php";
-
-/*
-|--------------------------------------------------------------------------
-| Initialise Shortcut Functions
-|--------------------------------------------------------------------------
-|
-| Simple functions you can call from anywhere in your application.
-| This is not a core feature, you can remove it and your app would still
-| work fine.
-|
-*/
-require __DIR__ . "/Config/functions.php";
+Database::config(DatabaseConfig());
 
 /*
 |--------------------------------------------------------------------------
@@ -61,13 +53,23 @@ require __DIR__ . "/Config/functions.php";
 
 /*
 |--------------------------------------------------------------------------
-| Initialise Leaf Core
+| Configure your leaf app
 |--------------------------------------------------------------------------
 |
 | Plant a seed, grow the stem and return Leaf🤷‍
 |
 */
-$app = new Leaf\App(AppConfig());
+Leaf\Config::set(AppConfig());
+
+/*
+|--------------------------------------------------------------------------
+| Load application paths
+|--------------------------------------------------------------------------
+|
+| Tell Leaf MVC Core where to locate application paths
+|
+*/
+Leaf\Core::paths(PathsConfig());
 
 /*
 |--------------------------------------------------------------------------
@@ -78,7 +80,7 @@ $app = new Leaf\App(AppConfig());
 | CORS errors at you.
 |
 */
-$app->evadeCors(false);
+app()->cors();
 
 /*
 |--------------------------------------------------------------------------
@@ -98,4 +100,4 @@ require __DIR__ . "/routes/index.php";
 | Require app routes
 |
 */
-$app->run();
+app()->run();

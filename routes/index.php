@@ -9,7 +9,7 @@
 | add a custom error 404 handler.
 |
 */
-// $app->set404(function() {
+// app()->set404(function() {
 //     echo "error 404";
 // });
 
@@ -22,7 +22,7 @@
 | the controller namespace first.
 |
 */
-$app->setNamespace("\Controllers");
+app()->setNamespace("\Controllers");
 
 // You can break up routes into modules
 require __DIR__ . "/_app.php";

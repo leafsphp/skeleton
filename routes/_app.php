@@ -1,11 +1,9 @@
 <?php
 
-/**@var Leaf\App $app */
-
-$app->get("/", function () {
-    import(views_path("index.html", false));
+app()->get("/", function () {
+    response()->page(views_path("index.html", false));
 });
 
-$app->get("/home", "TestsController@index");
+app()->get("/home", "TestsController@index");
 
-$app->get("/test", "TestsController@test");
+app()->get("/test", "TestsController@test");
