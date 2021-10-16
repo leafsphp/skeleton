@@ -22,9 +22,10 @@
         "leafs/leaf": "dev-v3.x-dev",
         "leafs/logger": "^1.0",
         "leafs/cors": "^1.0",
-        "leafs/mvc-core": "dev-main",
+        "leafs/mvc-core": "^1.1",
         "leafs/form": "^1.0",
-        "leafs/bareui": "^1.0"
+        "leafs/bareui": "^1.0",
+        "leafs/auth": "^1.0"
     },
     "config": {
         "optimize-autoloader": true,
