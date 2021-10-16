@@ -27,6 +27,18 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Custom config method
+    |--------------------------------------------------------------------------
+    |
+    | Configuration for your templating engine.
+    |
+    */
+    "config" => function ($config) {
+        app()->template->config("path", str_replace("/", "@", $config["views_path"]));
+    },
+
+    /*
+    |--------------------------------------------------------------------------
     | Custom render method
     |--------------------------------------------------------------------------
     |
@@ -37,7 +49,6 @@ return [
     |
     */
     "render" => function(string $view, array $data = []) {
-        app()->template->config("path", viewsPath("/", false));
         return response()->markup(app()->template->render($view, $data));
     },
 ];
