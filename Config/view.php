@@ -34,7 +34,7 @@ return [
     |
     */
     "config" => function ($config) {
-        app()->template->config("path", str_replace("/", "@", $config["views_path"]));
+        app()->template->config("path", str_replace("/", "", $config["views_path"]));
     },
 
     /*
