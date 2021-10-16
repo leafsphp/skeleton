@@ -17,7 +17,7 @@
         </header>
         <?php
             // You can use another render in here to include bare UI partials
-            render("body", [
+            view("body", [
                 "title" => $title
             ]);
         ?>

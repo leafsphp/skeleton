@@ -8,7 +8,7 @@ class TestsController extends Controller
 {
     public function index()
     {
-        render("test", [
+        echo view("test", [
             "title" => "Leaf Skeleton v3.0",
         ]);
     }
