@@ -2,8 +2,6 @@
 
 namespace Models;
 
-new \Leaf\Database;
-
 /**
  * Base Model
  */
