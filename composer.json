@@ -26,7 +26,8 @@
         "leafs/form": "^1.0",
         "leafs/bareui": "^1.0",
         "leafs/auth": "^1.1",
-        "leafs/http": "^1.0"
+        "leafs/http": "^1.1",
+        "leafs/router": "^0.1.3"
     },
     "config": {
         "optimize-autoloader": true,
