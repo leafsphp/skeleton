@@ -80,7 +80,7 @@ Leaf\Core::paths(PathsConfig());
 | CORS errors at you.
 |
 */
-app()->cors();
+app()->cors(CorsConfig());
 
 /*
 |--------------------------------------------------------------------------
