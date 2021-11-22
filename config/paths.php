@@ -1,29 +1,29 @@
 <?php
 
 return [
-	"controllersPath" => "Controllers",
+	"controllersPath" => "controllers",
 
-	"modelsPath" => "Models",
+	"modelsPath" => "models",
 
-	"migrationsPath" => "Migrations",
+	"migrationsPath" => "migrations",
 
-	"seedsPath" => "Seeds",
+	"seedsPath" => "seeds",
 
-	"factoriesPath" => "Factories",
+	"factoriesPath" => "factories",
 
-	"helpersPath" => "Helpers",
+	"helpersPath" => "helpers",
 
 	"viewsPath" => "pages",
 
-	"configPath" => "Config",
+	"configPath" => "config",
 
 	"storagePath" => "storage",
 
-	"commandsPath" => "Console",
+	"commandsPath" => "console",
 
 	"routesPath" => "routes",
 
-	"libPath" => "Lib",
+	"libPath" => "lib",
 
 	"publicPath" => ".",
 ];
