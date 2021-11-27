@@ -48,7 +48,7 @@ return [
     | whenever and wherever you feel the need.
     |
     */
-    "render" => function(string $view, array $data = []) {
+    "render" => function (string $view, array $data = []) {
         return response()->markup(app()->template->render($view, $data));
     },
 ];
