@@ -18,16 +18,14 @@
         }
     ],
     "require": {
-        "vlucas/phpdotenv": "^3.6",
+        "leafs/mvc-core": "dev-main",
         "leafs/leaf": "v3.0-alpha",
         "leafs/logger": "^1.0",
         "leafs/cors": "^1.0",
-        "leafs/mvc-core": "^1.1",
-        "leafs/form": "^1.0",
-        "leafs/bareui": "^1.0",
+        "leafs/router": "^0.1.4",
         "leafs/auth": "^1.1",
-        "leafs/http": "^1.1",
-        "leafs/router": "^0.1.3"
+        "leafs/form": "^1.0",
+        "leafs/bareui": "^1.0"
     },
     "autoload": {
         "psr-4": {
@@ -49,11 +47,7 @@
             "App\\Console\\": "app/console/",
             "App\\Helpers\\": "app/helpers/",
             "App\\Services\\": "app/services/",
-            "App\\Controllers\\": "app/controllers/",
-            "App\\Database\\Seeds\\": "app/database/Seeds/",
-            "App\\Database\\Schema\\": "app/database/Schema/",
-            "App\\Database\\Factories\\": "app/database/factories/",
-            "App\\Database\\Migrations\\": "app/database/Migrations/"
+            "App\\Controllers\\": "app/controllers/"
         }
     },
     "config": {
