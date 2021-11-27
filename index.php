@@ -14,7 +14,7 @@ use Leaf\Database;
 |
 */
 
-require_once __DIR__ . '/vendor/autoload.php';
+require __DIR__ . '/vendor/autoload.php';
 
 /*
 |--------------------------------------------------------------------------
@@ -24,7 +24,11 @@ require_once __DIR__ . '/vendor/autoload.php';
 | Quickly use our environment variables
 |
 */
-\Dotenv\Dotenv::create(__DIR__)->load();
+try {
+    \Dotenv\Dotenv::createUnsafeImmutable(__DIR__)->load();
+} catch (\Throwable $th) {
+    trigger_error($th);
+}
 
 /*
 |--------------------------------------------------------------------------
