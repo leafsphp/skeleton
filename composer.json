@@ -18,8 +18,8 @@
         }
     ],
     "require": {
-        "leafs/mvc-core": "dev-main",
-        "leafs/leaf": "v3.0-alpha",
+        "leafs/mvc-core": "^1.1",
+        "leafs/leaf": "v3.0-rc",
         "leafs/logger": "^1.0",
         "leafs/cors": "^1.0",
         "leafs/router": "^0.1.4",
