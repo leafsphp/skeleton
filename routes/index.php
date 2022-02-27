@@ -10,7 +10,7 @@
 |
 */
 // app()->set404(function() {
-//     echo "error 404";
+//     echo 'error 404';
 // });
 
 /*
@@ -22,7 +22,7 @@
 | the controller namespace first.
 |
 */
-app()->setNamespace("\Controllers");
+app()->setNamespace('\Controllers');
 
 // You can break up routes into modules
-require __DIR__ . "/_app.php";
+require __DIR__ . '/_app.php';
