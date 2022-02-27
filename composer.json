@@ -18,13 +18,13 @@
         }
     ],
     "require": {
-        "leafs/mvc-core": "^1.1",
-        "leafs/leaf": "v3.0-rc",
+        "leafs/mvc-core": "^1.1.6",
+        "leafs/leaf": "3.0-rc.2",
         "leafs/logger": "^1.0",
         "leafs/cors": "^1.0",
-        "leafs/router": "^0.1.4",
-        "leafs/auth": "^1.1",
-        "leafs/form": "^1.0",
+        "leafs/router": "^0.1.5",
+        "leafs/auth": "^2.1",
+        "leafs/form": "^1.2",
         "leafs/bareui": "^1.0"
     },
     "autoload": {
