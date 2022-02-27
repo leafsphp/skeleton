@@ -11,7 +11,7 @@ return [
     | the usual LeafMVC view path has already been registered for you.
     |
     */
-    "viewsPath" => viewsPath("", false),
+    'viewsPath' => viewsPath('', false),
 
     /*
     |--------------------------------------------------------------------------
@@ -23,7 +23,7 @@ return [
     | directory. However, as usual, you are free to change this value.
     |
     */
-    "cachePath" => storagePath('framework/views'),
+    'cachePath' => storagePath('framework/views'),
 
     /*
     |--------------------------------------------------------------------------
@@ -33,8 +33,8 @@ return [
     | Configuration for your templating engine.
     |
     */
-    "config" => function ($config) {
-        app()->template->config("path", str_replace("/", "", $config["views_path"]));
+    'config' => function ($config) {
+        app()->template->config('path', str_replace('/', '', $config['views_path']));
     },
 
     /*
@@ -48,7 +48,7 @@ return [
     | whenever and wherever you feel the need.
     |
     */
-    "render" => function (string $view, array $data = []) {
+    'render' => function (string $view, array $data = []) {
         return response()->markup(app()->template->render($view, $data));
     },
 ];
