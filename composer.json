@@ -18,11 +18,11 @@
         }
     ],
     "require": {
-        "leafs/mvc-core": "^1.1.6",
+        "leafs/mvc-core": "^1.1",
         "leafs/leaf": "^3.0",
         "leafs/logger": "^1.0",
         "leafs/cors": "^1.0",
-        "leafs/router": "^0.1.5",
+        "leafs/router": "^0.1.6",
         "leafs/auth": "^2.1",
         "leafs/form": "^1.2",
         "leafs/bareui": "^1.0"
