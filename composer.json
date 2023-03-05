@@ -19,7 +19,7 @@
     ],
     "require": {
         "leafs/mvc-core": "*",
-        "leafs/leaf": "^3.2",
+        "leafs/leaf": "^3.3",
         "leafs/logger": "*",
         "leafs/cors": "*",
         "leafs/router": "*",
