@@ -42,6 +42,21 @@ Database::config(DatabaseConfig());
 
 /*
 |--------------------------------------------------------------------------
+| Sync Leaf Db with ORM and connect
+|--------------------------------------------------------------------------
+|
+| Sync Leaf Db with ORM and connect to the database
+| This allows you to use Leaf Db without having to initialize it
+| in your controllers.
+|
+| This is optional, you can still use Leaf Db in your controllers. If you
+| want to opt into this, just uncomment the line below.
+|
+*/
+// Leaf\Database::syncLeafDb();
+
+/*
+|--------------------------------------------------------------------------
 | Attach blade view
 |--------------------------------------------------------------------------
 |
