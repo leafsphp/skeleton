@@ -8,6 +8,8 @@
 [![Total Downloads](https://poser.pugx.org/leafs/skeleton/downloads)](https://packagist.org/packages/leafs/skeleton)
 [![License](https://poser.pugx.org/leafs/skeleton/license)](https://packagist.org/packages/leafs/skeleton)
 
+*NOTE: SKELETON IS NO LONGER MAINTAINED BECAUSE THE LEAF CLI OFFERS SIMILAR FEATURES TO WHAT SKELETON HAS. LEAF CLI GOES A STEP FURTHER BY ALLOWING YOU TO SELECT EXACTLY WHAT YOU WANT IN YOUR APPLICATIONS. YOU CAN FIND THE DETAILS [HERE](https://leafphp.dev/docs/mvc/#leaf-skeleton)*
+
 # Leaf Skeleton 3
 
 Use this skeleton application to quickly setup and start working on a new Leaf PHP application without using a full-blown framework. Unlike [Leaf MVC](//mvc.leafphp.dev) and [Skeleton](//api.leafphp.dev), Skeleton keeps leaf as is, and doesn't build on top of it, it's perfect for creating smaller projects.
